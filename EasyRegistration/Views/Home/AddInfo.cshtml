@@ -1,0 +1,55 @@
+﻿@model EasyRegistration.Models.EmployeeModel
+
+@{
+    ViewData["Title"] = "AddInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Add Details</h1>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddInfo" method="post">
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="firstname" required /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="lastname" required /></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" required /></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="text" name="gender" required /></td>
+                </tr>
+                <tr>
+                    <td>age</td>
+                    <td><input type="number" name="age" required /></td>
+                </tr>
+                <tr>
+                    <td>Department</td>
+                    <td><input type="text" name="department" required /></td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td><input type="text" name="role" required /></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Add</button></td>
+                    
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

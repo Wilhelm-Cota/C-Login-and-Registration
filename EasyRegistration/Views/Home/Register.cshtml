@@ -1,0 +1,35 @@
+﻿@model EasyRegistration.Models.UserModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Register</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Register" method="post">
+            <table>
+                <tr>
+                    <td>User Name</td>
+                <td><input type="text" name="username" required /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                <td><input type="password" name="password" required /></td>
+                </tr>
+                <tr>
+                  <td><button type="submit">Register</button></td>
+                   <td>  <a asp-action="Index">Login</a></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

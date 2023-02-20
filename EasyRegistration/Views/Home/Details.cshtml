@@ -1,0 +1,34 @@
+﻿@model EasyRegistration.Models.EmployeeModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Employee</h1>
+<table>
+    <thead>
+        <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Department</th>
+        <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model.employeeslist){
+            <tr>
+                    <td>@employee.FirstName</td>
+                        <td>@employee.LastName</td>
+                            <td>@employee.Email</td>
+                                <td>@employee.Gender</td>
+                                    <td>@employee.Age</td>
+                                        <td>@employee.Department</td>
+                                            <td>@employee.Role</td>
+            </tr>
+        }
+    </tbody>
+</table>
